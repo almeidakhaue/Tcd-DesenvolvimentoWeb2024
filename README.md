@@ -14,4 +14,4 @@ Este projeto foi desenvolvido como trabalho de conclusão da disciplina Desenvol
 │   └── style.css        # Estilos visuais do site
 ├── images/
 │   ├── caozinho.svg     # Imagem de um cachorrinho
-│   └── ClinicaVet.png   # Imagem ilustrativa da clínica
+│   └── ClinicaVet.png   # Imagem ilustrativa da Site
