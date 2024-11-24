@@ -10,6 +10,8 @@ Este projeto foi desenvolvido como trabalho de conclusão da disciplina Desenvol
 
 ```plaintext
 ├── index.html           # Página principal do site
-├── style.css            # Estilos visuais do site
-├── assets/
-│   └── ClinicaVet.jpeg  # Imagem ilustrativa da clínica
+├── css/
+│   └── style.css        # Estilos visuais do site
+├── images/
+│   ├── caozinho.svg     # Imagem de um cachorrinho
+│   └── ClinicaVet.png   # Imagem ilustrativa da clínica
