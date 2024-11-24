@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Clínica Veterinária</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fas fa-clinic-medical"></i>
+            <h3>Menu</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#" onclick="showSection('pacientes')"><i class="fas fa-paw"></i> Pacientes</a></li>
+                <li><a href="#" onclick="showSection('consultas')"><i class="fas fa-calendar-alt"></i> Consultas</a></li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Header -->
+    <header>
+        <h1>Clínica Veterinária</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="home-box">
+                <h2>Bem-vindo ao Sistema de Clínica Veterinária</h2>
+                <p>Nosso sistema foi projetado para facilitar a gestão da sua clínica, oferecendo recursos para cadastro de pacientes e agendamento de consultas.</p>
+                <p>Explore as funcionalidades abaixo:</p>
+                <div class="shortcut-buttons">
+                    <button onclick="showSection('pacientes')"><i class="fas fa-paw"></i> Pacientes</button>
+                    <button onclick="showSection('consultas')"><i class="fas fa-calendar-alt"></i> Consultas</button>
+                </div>
+            </div>
+            <img src="images/caozinho.svg" alt="Cãozinho" class="home-svg">
+        </section>
+
+        <!-- Pacientes Section -->
+        <section id="pacientes" class="content-section">
+            <h2>Gestão de Pacientes</h2>
+            <div class="cards-container">
+                <button class="card" onclick="openModal('modal-cadastro')">
+                    <i class="fas fa-dog"></i>
+                    <h3>Cadastro</h3>
+                    <p>Adicione novos animais ao sistema.</p>
+                </button>
+            </div>
+        </section>
+
+        <!-- Consultas Section -->
+        <section id="consultas" class="content-section">
+            <h2>Gestão de Consultas</h2>
+            <div class="cards-container">
+                <button class="card" onclick="openModal('modal-consulta')">
+                    <i class="fas fa-notes-medical"></i>
+                    <h3>Agendar Consulta</h3>
+                    <p>Programe novas consultas para os pacientes.</p>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Cadastro -->
+    <div id="modal-cadastro" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-cadastro')">&times;</span>
+            <h2>Cadastro de Paciente</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" required>
+
+                <label for="especie">Espécie:</label>
+                <select id="especie" name="especie" required>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="outros">Outros</option>
+                </select>
+
+                <label for="raca">Raça:</label>
+                <input type="text" id="raca" name="raca" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-consulta" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-consulta')">&times;</span>
+            <h2>Agendar Consulta</h2>
+            <form>
+                <label for="nome-paciente">Nome do Paciente:</label>
+                <input type="text" id="nome-paciente" name="nome-paciente" required>
+    
+                <label for="data-consulta">Data:</label>
+                <input type="date" id="data-consulta" name="data-consulta" required>
+    
+                <label for="horario-consulta">Horário:</label>
+                <input type="time" id="horario-consulta" name="horario-consulta" required>
+    
+                <label for="veterinario">Veterinário:</label>
+                <input type="text" id="veterinario" name="veterinario" required>
+    
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Clínica Veterinária. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
