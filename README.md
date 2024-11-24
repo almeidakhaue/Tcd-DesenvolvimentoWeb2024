@@ -6,7 +6,7 @@ Este projeto foi desenvolvido como trabalho de conclusão da disciplina Desenvol
 
 [🎥 Demonstração do Site](https://drive.google.com/file/d/1J95Del_eWY0F_KagKmvijoYCgtFKIFcw/view?usp=sharing)
 
-![Imagem da Clínica Veterinária](ClinicaVet.png)
+![Imagem da Clínica Veterinária](images/ClinicaVet.png)
 
 ```plaintext
 ├── index.html           # Página principal do site
